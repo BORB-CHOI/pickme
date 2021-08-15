@@ -1,12 +1,24 @@
-import { random } from "./util";
+import { isInterfaceDeclaration } from "typescript";
+// import { random } from "./util";
 
-const rOne: number = random(10);
-const rTwo: number = random(20);
+const P = document.querySelector(".p");
 
-console.log(`${rOne} ${rTwo}`);
+const handleClickP = (event:any):any =>{
+  const target =  event.currentTarget;
+  console.dir(target);
+  target.textContent = 'Pick me';
+  target.style.fontSize = '30vh';
+  add
 
-function fn(s: any) {
-  // No error?
-  console.log(s);
-}
-fn(42);
+};
+
+const handleEvent = ():any => {
+  console.log(P);
+  P.addEventListener('click', handleClickP);
+};
+
+const init = ():any => {
+  handleEvent();
+};
+
+init();
